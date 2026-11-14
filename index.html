@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AR Build Works General Contractor Ltd. — professional construction, renovation and property maintenance services in Trinidad & Tobago.">
+  <meta name="theme-color" content="#101010">
+  <title>AR Build Works | General Contractor Ltd.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--gold:#d7a52c;--gold2:#f2ca68;--ink:#101010;--ink2:#191919;--paper:#f7f6f2;--muted:#b9b7b0;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:#171717;font-family:"DM Sans",Arial,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.container{width:min(1160px,92%);margin:auto}
+    .topbar{background:#090909;color:#ddd;font-size:.82rem;padding:8px 0}.topbar .container{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.topbar a{color:var(--gold2)}
+    header{position:sticky;top:0;z-index:10;background:rgba(13,13,13,.96);backdrop-filter:blur(12px);border-bottom:1px solid #34302a}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;color:white}.brand img{width:64px;height:64px;object-fit:cover;object-position:center;border-radius:8px}.brand strong{font-family:"Barlow Condensed",sans-serif;font-size:1.45rem;line-height:1.05;letter-spacing:.04em}.brand small{display:block;color:var(--gold2);font-size:.67rem;letter-spacing:.14em;margin-top:4px}
+    nav{display:flex;align-items:center;gap:27px;color:#eee;font-size:.9rem}nav a:hover{color:var(--gold2)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--gold);color:#111;padding:12px 19px;font-weight:800;border-radius:4px;transition:.2s;border:1px solid var(--gold)}.nav-cta:hover,.btn:hover{background:var(--gold2);transform:translateY(-2px)}.menu-btn{display:none;background:none;border:1px solid #555;color:white;border-radius:4px;padding:8px 11px;font-size:1.2rem}
+    .hero{background:linear-gradient(90deg,rgba(8,8,8,.97) 0%,rgba(8,8,8,.89) 48%,rgba(8,8,8,.25) 100%),url("assets/main-building.jpg") center/cover;min-height:590px;color:white;display:flex;align-items:center;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;right:-90px;bottom:-140px;width:420px;height:420px;border:2px solid rgba(215,165,44,.3);transform:rotate(35deg)}
+    .hero-content{position:relative;z-index:1;max-width:690px;padding:88px 0}.eyebrow{color:var(--gold2);font-weight:800;text-transform:uppercase;letter-spacing:.18em;font-size:.76rem}.hero h1{font-family:"Barlow Condensed",sans-serif;font-size:clamp(3.2rem,7vw,6.3rem);line-height:.92;text-transform:uppercase;margin:18px 0 20px;letter-spacing:.01em}.hero h1 span{color:var(--gold2)}.hero p{font-size:1.08rem;color:#e2e0db;max-width:550px;margin:0 0 30px}.hero-actions{display:flex;gap:13px;flex-wrap:wrap}.btn-outline{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border:1px solid #aaa;color:white;border-radius:4px;font-weight:700}.btn-outline:hover{border-color:var(--gold2);color:var(--gold2)}
+    .trust-strip{background:var(--gold);padding:16px 0}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;text-align:center}.trust-grid div{font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em}.trust-grid strong{display:block;font-family:"Barlow Condensed";font-size:1.35rem}
+    section{padding:82px 0}.section-head{max-width:700px;margin-bottom:35px}.kicker{color:#9a7118;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:.75rem}.section-head h2{font-family:"Barlow Condensed";font-size:clamp(2.5rem,5vw,4rem);line-height:.98;text-transform:uppercase;margin:10px 0 13px}.section-head p{color:#666;margin:0}.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.service{background:white;padding:24px;border:1px solid #e8e4da;border-top:3px solid var(--gold);box-shadow:0 8px 24px rgba(0,0,0,.035)}.service .num{font-family:"Barlow Condensed";font-size:2rem;color:#c08b1a;font-weight:800}.service h3{font-family:"Barlow Condensed";font-size:1.45rem;text-transform:uppercase;margin:5px 0}.service p{color:#6c6a65;font-size:.9rem;margin:0}
+    .about{background:#111;color:white}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about-photo{min-height:420px;background:url("assets/main-building.jpg") center/cover;border:8px solid #25231e;box-shadow:16px 16px 0 var(--gold)}.about .section-head p{color:#c3c0b8}.checks{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:25px}.check{display:flex;gap:10px;align-items:flex-start;color:#eee;font-size:.9rem}.check b{color:var(--gold2);font-size:1.1rem}
+    .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.project{position:relative;overflow:hidden;background:#222;min-height:190px;border-radius:3px}.project img{width:100%;height:220px;object-fit:cover;transition:transform .45s}.project:hover img{transform:scale(1.06)}.project span{position:absolute;bottom:0;left:0;right:0;padding:12px 13px;background:linear-gradient(transparent,rgba(0,0,0,.9));color:white;font-family:"Barlow Condensed";font-weight:700;font-size:1.15rem;text-transform:uppercase}
+    .process{background:#eeeae0}.benefits{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.benefit{background:white;text-align:center;padding:23px 14px;border-bottom:3px solid var(--gold)}.benefit .symbol{font-size:1.7rem;color:#a97813}.benefit h3{font-family:"Barlow Condensed";text-transform:uppercase;font-size:1.15rem;line-height:1.05;margin:10px 0 0}
+    .cta-band{background:linear-gradient(110deg,#c28e1c,#efc65f);padding:45px 0}.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:25px}.cta-band h2{font-family:"Barlow Condensed";font-size:clamp(2.1rem,4vw,3.6rem);line-height:.95;text-transform:uppercase;margin:0 0 8px}.cta-band p{margin:0;font-weight:600}.cta-band .btn{background:#111;color:white;border-color:#111;white-space:nowrap}.contact{background:#111;color:white}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px}.contact .section-head p{color:#bbb}.contact-cards{display:grid;gap:13px;margin-top:25px}.contact-card{display:flex;gap:14px;align-items:center;padding:17px;background:#1d1d1d;border:1px solid #333}.contact-card .ico{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#111;font-size:1.25rem}.contact-card small{display:block;color:#aaa;text-transform:uppercase;letter-spacing:.12em;font-size:.67rem}.contact-card strong{font-size:1.02rem;overflow-wrap:anywhere}.contact-card:hover{border-color:var(--gold)}
+    .quote-form{background:#1d1d1d;padding:27px;border:1px solid #37332b}.quote-form h3{font-family:"Barlow Condensed";font-size:1.8rem;text-transform:uppercase;margin:0 0 17px}.field{margin-bottom:14px}.field label{display:block;font-size:.78rem;color:#ccc;margin-bottom:6px}.field input,.field textarea,.field select{width:100%;padding:12px;background:#101010;border:1px solid #48443c;color:white;border-radius:3px;font:inherit}.field textarea{min-height:105px;resize:vertical}.quote-form .btn{width:100%;cursor:pointer;font:inherit;font-weight:800}.form-note{font-size:.75rem;color:#aaa;margin:12px 0 0}
+    footer{background:#080808;color:#aaa;padding:24px 0;font-size:.8rem}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer-inner strong{color:var(--gold2)}
+    @media(max-width:850px){nav{gap:15px}.nav-cta{display:none}.services-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:repeat(2,1fr)}.benefits{grid-template-columns:repeat(3,1fr)}.about-grid{gap:30px}}
+    @media(max-width:650px){.topbar .container{justify-content:center;text-align:center}.nav{height:70px}.brand img{width:52px;height:52px}.brand strong{font-size:1.2rem}.menu-btn{display:block}nav{display:none;position:absolute;top:70px;left:0;right:0;background:#111;padding:20px 4%;border-top:1px solid #333;flex-direction:column;align-items:flex-start}nav.open{display:flex}.hero{min-height:540px;background-position:58% center}.hero-content{padding:70px 0}.trust-grid{grid-template-columns:repeat(2,1fr);row-gap:18px}section{padding:62px 0}.services-grid{grid-template-columns:1fr}.about-grid,.contact-grid{grid-template-columns:1fr}.about-photo{min-height:280px;order:2}.gallery-grid{grid-template-columns:repeat(2,1fr);gap:9px}.project{min-height:150px}.project img{height:160px}.benefits{grid-template-columns:repeat(2,1fr)}.cta-inner{align-items:flex-start;flex-direction:column}.checks{grid-template-columns:1fr}.quote-form{padding:20px}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="container"><span>Professional Construction &amp; Maintenance Services</span><span>Serving Trinidad &amp; Tobago · <a href="tel:+18687585706">1-868-758-5706</a></span></div></div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="AR Build Works home">
+        <img src="assets/brand-logo.jpg" alt="AR Build Works logo">
+        <span><strong>AR BUILD WORKS</strong><small>GENERAL CONTRACTOR LTD.</small></span>
+      </a>
+      <button class="menu-btn" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav id="navigation">
+        <a href="#home">Home</a><a href="#services">Services</a><a href="#projects">Our Work</a><a href="#about">Why Choose Us</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="https://wa.me/18687585706?text=Hello%20AR%20Build%20Works%2C%20I%27d%20like%20to%20request%20a%20free%20site%20visit." target="_blank" rel="noopener">GET A FREE QUOTE ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container"><div class="hero-content">
+        <div class="eyebrow">AR Build Works · General Contractor Ltd.</div>
+        <h1>Building your dreams.<br><span>Securing your investment.</span></h1>
+        <p>Building quality. Delivering excellence. Professional construction, renovation and property maintenance services for residential and commercial projects across Trinidad &amp; Tobago.</p>
+        <div class="hero-actions">
+          <a class="btn" href="https://wa.me/18687585706?text=Hello%20AR%20Build%20Works%2C%20I%27d%20like%20a%20free%20site%20visit%20and%20quotation." target="_blank" rel="noopener">REQUEST A FREE SITE VISIT ↗</a>
+          <a class="btn-outline" href="#services">EXPLORE OUR SERVICES</a>
+        </div>
+      </div></div>
+    </section>
+
+    <div class="trust-strip"><div class="container trust-grid">
+      <div><strong>Quality</strong>Workmanship</div><div><strong>Residential</strong>&amp; Commercial</div><div><strong>Free</strong>Estimates</div><div><strong>Trinidad</strong>&amp; Tobago</div>
+    </div></div>
+
+    <section id="services"><div class="container">
+      <div class="section-head"><div class="kicker">What we do</div><h2>Complete solutions.<br>Quality at every stage.</h2><p>From new construction to finishing touches and ongoing upkeep, our team is ready to help bring your project to life.</p></div>
+      <div class="services-grid">
+        <article class="service"><div class="num">01</div><h3>General Construction</h3><p>Construction services for residential and commercial projects.</p></article>
+        <article class="service"><div class="num">02</div><h3>Block Wall Construction</h3><p>Strong, carefully built block walls for your property.</p></article>
+        <article class="service"><div class="num">03</div><h3>Plastering &amp; Rendering</h3><p>Professional surface preparation and smooth wall finishes.</p></article>
+        <article class="service"><div class="num">04</div><h3>Painting — Interior &amp; Exterior</h3><p>Refresh and protect your spaces with quality paintwork.</p></article>
+        <article class="service"><div class="num">05</div><h3>Building Repairs &amp; Renovations</h3><p>Repair, upgrade and improve existing buildings and spaces.</p></article>
+        <article class="service"><div class="num">06</div><h3>Roofing Repairs &amp; Installation</h3><p>Roof repairs and installation to help protect your investment.</p></article>
+        <article class="service"><div class="num">07</div><h3>Concrete Works</h3><p>Practical concrete work for a range of property needs.</p></article>
+        <article class="service"><div class="num">08</div><h3>Tiling Installation</h3><p>Neat tile installation for clean, durable finishes.</p></article>
+        <article class="service"><div class="num">09</div><h3>Fence Construction</h3><p>Boundary and fence construction to suit your property.</p></article>
+        <article class="service"><div class="num">10</div><h3>Pressure Washing</h3><p>Help restore the appearance of exterior surfaces.</p></article>
+        <article class="service"><div class="num">11</div><h3>Property Maintenance</h3><p>Ongoing maintenance to keep your property looking its best.</p></article>
+      </div>
+    </div></section>
+
+    <section class="about" id="about"><div class="container about-grid">
+      <div><div class="section-head"><div class="kicker">Why choose AR Build Works?</div><h2>Building quality.<br><span style="color:var(--gold2)">Delivering excellence.</span></h2><p>We believe every project deserves dependable service, quality workmanship and clear value. Whether residential or commercial, we approach your project with care from start to finish.</p></div>
+        <div class="checks"><div class="check"><b>✓</b><span>Reliable &amp; professional service</span></div><div class="check"><b>✓</b><span>Quality workmanship</span></div><div class="check"><b>✓</b><span>Competitive pricing</span></div><div class="check"><b>✓</b><span>Residential &amp; commercial projects</span></div><div class="check"><b>✓</b><span>Free estimates</span></div></div>
+      </div>
+      <div class="about-photo" role="img" aria-label="Modern residential building project"></div>
+    </div></section>
+
+    <section id="projects"><div class="container">
+      <div class="section-head"><div class="kicker">A look at our work</div><h2>Projects &amp; services</h2><p>A selection of the construction and maintenance work featured in our company profile.</p></div>
+      <div class="gallery-grid">
+        <div class="project"><img src="assets/main-building.jpg" alt="Modern apartment building project"><span>Building Construction</span></div>
+        <div class="project"><img src="assets/block-wall.jpg" alt="Block wall construction"><span>Block Wall Construction</span></div>
+        <div class="project"><img src="assets/plastering.jpg" alt="Plastered wall finish"><span>Plastering &amp; Rendering</span></div>
+        <div class="project"><img src="assets/painting.jpg" alt="Interior painting"><span>Interior &amp; Exterior Painting</span></div>
+        <div class="project"><img src="assets/roofing.jpg" alt="Roofing installation"><span>Roofing Repairs &amp; Installation</span></div>
+        <div class="project"><img src="assets/tiling.jpg" alt="Interior tiling installation"><span>Tiling Installation</span></div>
+        <div class="project"><img src="assets/fencing.jpg" alt="Modern fence construction"><span>Fence Construction</span></div>
+        <div class="project"><img src="assets/pressure-washing.jpg" alt="Pressure washing work"><span>Pressure Washing</span></div>
+        <div class="project"><img src="assets/renovation.jpg" alt="Building repair and renovation"><span>Building Repairs &amp; Renovations</span></div>
+      </div>
+    </div></section>
+
+    <section class="process"><div class="container">
+      <div class="section-head"><div class="kicker">Our commitment</div><h2>Good work. Solid value.</h2><p>Our focus is on the qualities that matter when choosing a contractor.</p></div>
+      <div class="benefits">
+        <div class="benefit"><div class="symbol">🛡</div><h3>Reliable &amp; Professional Service</h3></div>
+        <div class="benefit"><div class="symbol">⌂</div><h3>Quality Workmanship</h3></div>
+        <div class="benefit"><div class="symbol">＄</div><h3>Competitive Pricing</h3></div>
+        <div class="benefit"><div class="symbol">▥</div><h3>Residential &amp; Commercial</h3></div>
+        <div class="benefit"><div class="symbol">☷</div><h3>Free Estimates</h3></div>
+      </div>
+    </div></section>
+
+    <div class="cta-band"><div class="container cta-inner">
+      <div><h2>Call today for a free site visit<br>&amp; quotation!</h2><p>Let's discuss your next construction or maintenance project.</p></div>
+      <a class="btn" href="https://wa.me/18687585706?text=Hello%20AR%20Build%20Works%2C%20I%27d%20like%20to%20arrange%20a%20free%20site%20visit." target="_blank" rel="noopener">CHAT ON WHATSAPP ↗</a>
+    </div></div>
+
+    <section class="contact" id="contact"><div class="container contact-grid">
+      <div><div class="section-head"><div class="kicker">Get in touch</div><h2>Let's build something great.</h2><p>Contact AR Build Works General Contractor Ltd. to discuss your project and request a free site visit and quotation.</p></div>
+        <div class="contact-cards">
+          <a class="contact-card" href="https://wa.me/18687585706" target="_blank" rel="noopener"><span class="ico">✆</span><span><small>WhatsApp / Call</small><strong>1-868-758-5706</strong></span></a>
+          <a class="contact-card" href="mailto:projects@arbuildworks.co.tt"><span class="ico">✉</span><span><small>Email</small><strong>projects@arbuildworks.co.tt</strong></span></a>
+          <div class="contact-card"><span class="ico">⌖</span><span><small>Serving</small><strong>Trinidad &amp; Tobago</strong></span></div>
+        </div>
+      </div>
+      <form class="quote-form" id="quoteForm">
+        <h3>Request a free quotation</h3>
+        <div class="field"><label for="name">Your name</label><input id="name" name="name" required placeholder="Enter your name"></div>
+        <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" required placeholder="Your contact number"></div>
+        <div class="field"><label for="service">Service required</label><select id="service" name="service" required><option value="">Select a service</option><option>General Construction</option><option>Block Wall Construction</option><option>Plastering & Rendering</option><option>Painting</option><option>Building Repairs & Renovations</option><option>Roofing Repairs & Installation</option><option>Concrete Works</option><option>Tiling Installation</option><option>Fence Construction</option><option>Pressure Washing</option><option>Property Maintenance</option><option>Other / Not sure yet</option></select></div>
+        <div class="field"><label for="details">Tell us briefly about your project</label><textarea id="details" name="details" placeholder="Project location, scope and any details that will help us..."></textarea></div>
+        <button class="btn" type="submit">SEND REQUEST VIA WHATSAPP ↗</button>
+        <p class="form-note">This form opens WhatsApp with your message ready to send. No information is stored on this website.</p>
+      </form>
+    </div></section>
+  </main>
+  <footer><div class="container footer-inner"><span>© <span id="year"></span> <strong>AR Build Works General Contractor Ltd.</strong> All rights reserved.</span><span>Building stronger communities. One project at a time.</span><a href="#home">Back to top ↑</a></div></footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-btn');
+    const navigation = document.querySelector('#navigation');
+    menuButton.addEventListener('click', () => {
+      const opened = navigation.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(opened));
+      menuButton.textContent = opened ? '✕' : '☰';
+    });
+    navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navigation.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.textContent = '☰';
+    }));
+    document.querySelector('#year').textContent = new Date().getFullYear();
+    document.querySelector('#quoteForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      const message = [
+        'Hello AR Build Works, I would like to request a free site visit and quotation.',
+        `Name: ${data.get('name')}`,
+        `Phone: ${data.get('phone')}`,
+        `Service: ${data.get('service')}`,
+        `Project details: ${data.get('details') || 'Not provided'}`
+      ].join('\n');
+      window.open(`https://wa.me/18687585706?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+    });
+  </script>
+</body>
+</html>
